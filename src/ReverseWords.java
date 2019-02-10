@@ -9,11 +9,9 @@ public class ReverseWords {
         BufferedReader br =
                 new BufferedReader(new InputStreamReader(System.in));
         Integer n = Integer.parseInt(br.readLine());
-        System.out.println(n);
         for (int i=0;i<n;i++){
             String line=br.readLine();
             String [] arr = line.split("\\.");
-            System.out.println(arr.length);
             for(int j=arr.length-1;j!=-1;j--){
                 System.out.print(arr[j]+" ");
             }
