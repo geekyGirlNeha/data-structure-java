@@ -18,6 +18,10 @@ public class ParenthesisChecker {
 
             if (exp.charAt(i) == '(' || exp.charAt(i) == '[' || exp.charAt(i) == '{') {
                 stk.push(exp.charAt(i));
+                if (i == exp.length() - 1) {
+                    flag = false;
+                    break;
+                }
             } else {
                 if (stk.empty()) {
                     flag = false;
@@ -63,10 +67,12 @@ public class ParenthesisChecker {
 
     public static void main(String[] args) throws IOException {
 
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String exp = br.readLine();
-        isBalanced(exp);
+        int n = Integer.parseInt(br.readLine());
+        for (int i = 0; i < n; i++) {
+            String exp = br.readLine();
+            isBalanced(exp);
+        }
 
     }
 }
