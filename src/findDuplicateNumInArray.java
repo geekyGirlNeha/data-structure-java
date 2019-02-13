@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class FindDuplicateNumInArray{
+public class findDuplicateNumInArray{
 
 public static void printDuplicateNumbers(Integer[] arr){
 
