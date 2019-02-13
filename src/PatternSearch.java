@@ -13,7 +13,7 @@ public class PatternSearch {
         lps[0] = 0;
         //j to keep track matching char
         int j = 0;
-//i to compare char with j
+        //i to compare char with j
         for (int i = 1; i < pat.length(); i++) {
             if (pat.charAt(j) == pat.charAt(i)) {
                 //if matches, incrementing value at index j by 1
@@ -81,9 +81,15 @@ public class PatternSearch {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //to read input from console
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String text = br.readLine();
-        String pat = br.readLine();
+        String pat = br.readLine();*/
+
+        String text= "AAAAABAAABA";
+        String pat="AAAA";
         patternSearch(text, pat);
+
+
     }
 }
