@@ -1,7 +1,5 @@
 public class ChackBST {
 
-    //static int status=1;
-
     public static int isBST(Node root){
 
         int isLeft;
