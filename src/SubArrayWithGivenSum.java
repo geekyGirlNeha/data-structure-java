@@ -20,18 +20,20 @@ public class SubArrayWithGivenSum {
                 list.add(arr[j]);
                 //sub array sum is equal to S
                 if(sum==S){
-                    System.out.println(list);
+                    int start=++i;
+                    int end = ++j;
+                    System.out.println(i+" "+j);
                     break outerloop;
+
+                }
+
+                if(i==arr.length-1&& sum!=S){
+                    System.out.println(-1);
                 }
 
                 if(sum>S){
                     break;
                 }
-
-                if(i==arr.length-1&& sum!=S){
-                    System.out.println("Not found");
-                }
-
 
             }
         }
