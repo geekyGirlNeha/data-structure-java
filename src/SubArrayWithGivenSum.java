@@ -1,11 +1,14 @@
-//program to print all sub arrays whose sum is equal to S
+//program to print first continuous sub array whose sum is equal to S
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SubArrayWithGivenSum {
 
     public static void subArray(int [] arr,int S){
 
+        outerloop:
         for(int i=0;i<arr.length;i++){
 
             int sum=0;
@@ -18,6 +21,7 @@ public class SubArrayWithGivenSum {
                 //sub array sum is equal to S
                 if(sum==S){
                     System.out.println(list);
+                    break outerloop;
                 }
 
                 if(sum>S){
@@ -37,10 +41,27 @@ public class SubArrayWithGivenSum {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        int [] arr={1,4,2,7,9};
-        subArray(arr,9);
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+
+        for (int i=0;i<t;i++){
+
+            int n=in.nextInt();
+            int S=in.nextInt();
+            int [] arr=new int[n];
+            int j=0;
+
+            while (j<n){
+                arr[j]=in.nextInt();
+                j++;
+            }
+
+            subArray(arr,S);
+
+        }
+
 
     }
 }
